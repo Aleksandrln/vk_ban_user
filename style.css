@@ -1,0 +1,121 @@
+#save_images {
+    display: inline-flex;
+    position: relative;
+}
+
+.button_gray button {
+    min-width: 176px;
+    min-height: 30px;
+}
+
+.box_layout .group-range {
+    display: block;
+    padding-left: 12px;
+}
+
+#save_images .group-range span{
+    margin-left: 25px;
+}
+
+.box_layout .button-range{
+    padding-bottom:2px;
+    text-align: right;
+    width: 100%;
+}
+
+.box_layout .button-range .max-range,
+.box_layout .button-range .min-range,
+.box_layout .group-range .max-archive{
+    min-width: 173px;
+    line-height: 150%;
+}
+
+.toggle-bg{
+    background: #f6f8f9;
+    box-shadow: 0 1px 0 #fff, inset 0 0 2px #d7dee3, inset 0 1px 0 #d7dee3, inset 0 1px 5px #d7dee3;
+    display: block; /* ...So that we can set a height and width */
+    float: left; /* ...So that it doesn't take up the full width of the page */
+    height: 26px; /* You can change this later if you want */
+    position: relative; /* Required to allow the switch to move around */
+    width: 9px; /* This can be changed later as well */
+
+    top: 25px;
+    left: -20px;
+}
+
+.toggle-bg .label-top{
+    position: relative;
+    bottom: 35px;
+    right: 3px;
+}
+
+.toggle-bg .label-bottom{
+    position: relative;
+    bottom: 11px;
+    right: 3px;
+}
+
+.toggle-bg input{
+    height: 28px;
+    left: 0;
+    margin: 0; /* Reset the margins and padding */
+    opacity: 0; /* Invisible! */
+    padding: 0;
+    position: absolute;
+    top: -1px; /* Shift vertically */
+    width: 10px;
+    z-index: 2; /* We want the input to be over the span.switch, which we'll give a z-index of 1 */
+}
+
+.switch{
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 1px #65727b, 0 0 1px #b6bdc2;
+
+    display: block;
+    float: left;
+
+    right: 3px; /* This is the starting point. When adding a border radius, a small bit of the background is shown if we use left: 0;, so -1px is best.*/
+    position: relative;
+    top: -4px; /* ...To keep it centered vertically */
+
+    transition: left .2s ease;
+
+    height: 16px;
+    width: 16px;
+    z-index: 1; /* Remember, it must be below the invisible inputs */
+}
+
+.toggle-bg input:checked~.switch{top: -4px;} /* initial toggle position */
+
+.toggle-bg input~:checked~.switch{top: 13px;} /* final relative toggle position */
+
+.toggle-bg input:checked{z-index: 0;}
+
+.box_layout .error-number{
+    border: 1px solid #f2ab99;
+    padding: 1px;
+    background: #ffefe9;
+    word-wrap: break-word;
+    border-radius: 2px;
+}
+
+#progress{
+    position: absolute;
+    margin-top: 35px;
+    margin-left: 25px;
+}
+
+.vk_ban_select option{
+    padding: 6px 0 8px 9px;
+    background: #e7edf2;
+    color: #000;
+    border-bottom: 1px solid #dbe4ec;
+    list-style-type: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    line-height: 16px;
+    display: list-item;
+}

@@ -1,0 +1,33 @@
+<!--  <div class="msg error" >
+    <div class="msg_text" ></div>
+  </div>-->
+<div class="group_blb_wrap">
+  <div class="group_blb_wideblock clear">
+    <h4 class="subheader">Список юзеров</h4>
+    <textarea class="dark js_textarea-action" style="width: 100%; resize: vertical; height: 250px;"></textarea>
+    </div>
+  <div class="group_blb_block_info clear_fix">
+    <div class="group_blb_block_type">
+      <div></div>
+      <h4 class="subheader">Срок блокировки</h4>
+      <div class="vk_time_block group_blb_dd"></div>
+    </div>
+    <div class="group_blb_block_reason">
+      <div></div>
+      <h4 class="subheader">Причина</h4>
+      <div class="vk_reason_block group_blb_dd"></div>
+    </div>
+  </div>
+  <div class="group_blb_wideblock clear">
+    <div></div>
+    <h4 class="subheader">Комментарий</h4>
+    <input type="text" class="dark" id="group_blb_comment" placeholder="Здесь Вы можете указать короткий комментарий"
+           value="" onkeydown="if (event.keyCode == 10 || event.keyCode == 13) cur.blbSave();"
+           onkeyup="checkTextLength(230, this, 'group_blb_warn', 1)">
+    <div id="group_blb_warn"></div>
+    <div class="group_blb_comment_vis checkbox" id="group_blb_comment_vis" onclick="checkbox(this)" role="checkbox"
+         aria-checked="false" tabindex="0">
+      Показывать этот комментарий заблокированному пользователю
+    </div>
+  </div>
+</div>

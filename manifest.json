@@ -1,0 +1,40 @@
+{
+  "background": {
+    "scripts": [
+     "common.js", "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "js": [
+       "common.js", "contentScript.js"
+      ],
+      "matches": [
+        "https://vk.com/*"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "browser_action": {
+  },
+  "description": "Бан юзверов",
+  "name": "user ban",
+  "permissions": [
+    "tabs",
+    "https://*/*",
+    "unlimitedStorage",
+    "storage"
+  ],
+  "version": "0.0.1",
+  "author": "LN",
+  "manifest_version": 2,
+  "web_accessible_resources": [
+    "options.js",
+    "gen.js",
+    "common.js",
+    "options.html",
+    "inject.js",
+    "style.css",
+    "banUser.html"
+  ]
+}
